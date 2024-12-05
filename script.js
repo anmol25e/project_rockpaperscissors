@@ -20,9 +20,18 @@ function getComputerChoice(){
 console.log(getComputerChoice());
 
 
-function getHumanchoice(){
+
+function getHumanChoice(){
     let humanChoice = prompt("select out of rock/paper/scissors");
     return humanChoice;
 }
 
-console.log(getHumanchoice());
+console.log(getHumanChoice());
+
+
+// to keep track of the player score I made 2 variables
+
+humanScore = 0;
+computerScore = 0;
+
+
