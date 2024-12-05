@@ -18,3 +18,11 @@ function getComputerChoice(){
 }
 
 console.log(getComputerChoice());
+
+
+function getHumanchoice(){
+    let humanChoice = prompt("select out of rock/paper/scissors");
+    return humanChoice;
+}
+
+console.log(getHumanchoice());
