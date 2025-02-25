@@ -4,7 +4,11 @@ btnR.addEventListener('click', function () {
     location.reload()
     
 })
+// start heading
+let startHeading = document.getElementById("start-heading")
 
+// ingame heading
+let ingameHeading = document.getElementById("ingame-heading")
 
 
 // start button
@@ -17,6 +21,8 @@ startBtn.addEventListener('click', function () {
     rulesBtn.style.display = "none"
     IdkBnt.style.display = "none"
     startBtn.style.display = "none"
+    startHeading.style.display = "none"
+    ingameHeading.style.display = "block"
 
     
 })
@@ -25,11 +31,17 @@ startBtn.addEventListener('click', function () {
 // rules button
 let rulesBtn = document.getElementById("rules")
 
+rulesBtn.addEventListener('click', function () {
+    window.open("https://en.wikipedia.org/wiki/Rock_paper_scissors", "_blank");
+    
+})
+
 // Idk button
 let IdkBnt = document.getElementById("Idk")
-
-
-
+IdkBnt.addEventListener('click', function () {
+    window.open("https://github.com/anmol25e", "_blank")
+    
+})
 
 
 

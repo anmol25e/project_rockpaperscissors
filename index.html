@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS- UI</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <section id="area-1">
-        <h1>Welcome to the rock paper scisssors match</h1>
         <div class="Starting-button">
+            <h1 id="start-heading">Welcome to the rock paper scisssors match</h1>
             <button id="start">Start</button>
             <button id="rules">Rules</button>
-            <button id="Idk">IDK</button>
+            <button id="Idk">Github</button>
         </div>
         
 
 
     </section>
     <section id="area-2">
-
+        <h2 id="ingame-heading">Pick your Move</h2>
+        <div class="rps-button">
         <button id="btn1">ROCK</button>
         <button id="btn2">PAPER</button>
         <button id="btn3">SCISSORS</button>
+        </div>
 
-        <div id="youPick"></div>
-        <div id="pcPick"></div>
-        <div id="result"></div>
-        <div id="score"></div>
-        <div id="winner"></div>
-        <button id="btnR">RESTART/EXIT</button>
+
+
+        <div class="parent">
+            <div class="other-content">
+                <div id="youPick"></div>
+                <div id="pcPick"></div>
+                <div id="result"></div>
+                <div id="score"></div>
+                <div id="winner"></div>
+                <button id="btnR">EXIT</button>
+            </div>
+        </div>
+        
 
     </section>
     <script src="script.js"></script>

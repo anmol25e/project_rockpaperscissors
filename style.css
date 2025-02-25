@@ -5,8 +5,13 @@
 
 }
 
-#btn1, #btn2, #btn3{
+#btn1, #btn2, #btn3, #ingame-heading{
     display: none;
+
+}
+
+#ingame-heading{
+    text-align: center;
 }
 .Starting-button {
     display:flex;
@@ -14,3 +19,24 @@
     gap: 10px;
     align-items: center;
 }
+
+.rps-button{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+.other-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
