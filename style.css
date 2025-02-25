@@ -1,0 +1,16 @@
+#btnR{
+    color: blue;
+    display: none;
+    margin-top: 20px;
+
+}
+
+#btn1, #btn2, #btn3{
+    display: none;
+}
+.Starting-button {
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}

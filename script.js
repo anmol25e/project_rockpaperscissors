@@ -1,4 +1,38 @@
 // DOM
+let btnR = document.getElementById("btnR")
+btnR.addEventListener('click', function () {
+    location.reload()
+    
+})
+
+
+
+// start button
+
+let startBtn = document.getElementById("start")
+startBtn.addEventListener('click', function () {
+    btn1.style.display = "block"
+    btn2.style.display = "block"
+    btn3.style.display = "block"
+    rulesBtn.style.display = "none"
+    IdkBnt.style.display = "none"
+    startBtn.style.display = "none"
+
+    
+})
+
+
+// rules button
+let rulesBtn = document.getElementById("rules")
+
+// Idk button
+let IdkBnt = document.getElementById("Idk")
+
+
+
+
+
+
 
 let btn1 = document.getElementById("btn1")
 
@@ -7,7 +41,8 @@ btn1.addEventListener('click', function () {
     let youPick = document.getElementById('youPick');
     youPick.textContent = "you pick Rock"
     youPick.style.color = "red";
-    youPick.style.paddingTop = "50px";
+    youPick.style.marginTop = "50px";
+    btnR.style.display = "block"
 })
 
 let btn2 = document.getElementById("btn2")
@@ -18,7 +53,8 @@ btn2.addEventListener('click', function () {
     let youPick = document.getElementById('youPick');
     youPick.textContent = "you pick Paper"
     youPick.style.color = "red";
-    youPick.style.paddingTop = "50px";
+    youPick.style.marginTop = "50px";
+    btnR.style.display = "block"
 })
 
 let btn3 = document.getElementById("btn3")
@@ -29,9 +65,9 @@ btn3.addEventListener('click', function () {
     let youPick = document.getElementById('youPick');
     youPick.textContent = "you pick Sciccors"
     youPick.style.color = "red";
-    youPick.style.paddingTop = "50px";
+    youPick.style.marginTop = "50px";
+    btnR.style.display = "block"
 })
-
 
 
 
@@ -68,12 +104,23 @@ function getHumanChoice(humanChoice){
 // to keep track of the player score I made 2 variables
 let humanScore = 0;
 let computerScore = 0;
-let gameActive = true;
+// let gameActive = true;
 
 // logic for the single round, I will make a function which will compare the inputs of player 1 that is computer and player 2 that is us and increment the winner score and print the winner name
 function playRound(getHumanChoice){
-    if (!gameActive) return;
+    if (humanScore === 5){
+        let winner = document.getElementById("winner")
+        winner.textContent = ' YOU Won'
+        return;
 
+    }if (computerScore === 5) {
+        let winner = document.getElementById("winner")
+        winner.textContent = ' COMPUTER Won'
+        return;
+        
+    } else {
+        
+    }
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * 3)]
     console.log(`You chose: ${getHumanChoice}`);
@@ -148,23 +195,6 @@ function playRound(getHumanChoice){
     } else {
         return "Invalid choice. Please select rock, paper, or scissors.";
     }
-
-    if(humanScore === 5){
-        gameActive = false;
-
-        let winner = document.getElementById("winner")
-        winner.textContent = 'YOU WIN, PENCHOO'
-
-
-    }if (computerScore === 5) {
-        gameActive = false;
-        let winner = document.getElementById("winner")
-        winner.textContent = 'YOU LOSE, PC WIN'
-
-    } else {
-    }
-
-
 
 
 }
